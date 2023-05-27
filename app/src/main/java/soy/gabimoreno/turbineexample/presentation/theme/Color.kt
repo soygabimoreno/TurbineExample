@@ -1,4 +1,4 @@
-package soy.gabimoreno.turbineexample.ui.theme
+package soy.gabimoreno.turbineexample.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
