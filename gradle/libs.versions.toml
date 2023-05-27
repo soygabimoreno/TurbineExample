@@ -8,6 +8,9 @@ espresso-core = "3.5.1"
 lifecycle-runtime-ktx = "2.6.1"
 activity-compose = "1.7.1"
 compose-bom = "2023.03.00"
+mockk-version = '1.13.5'
+kluent-android-version = '1.73'
+app-cash-turbine-turbine = '0.13.0'
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -24,6 +27,9 @@ ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview
 ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 material3 = { group = "androidx.compose.material3", name = "material3" }
+mockk = { group = 'io.mockk', name = 'mockk', version.ref = 'mockk-version' }
+kluent-android = { group = 'org.amshove.kluent', name = 'kluent-android', version.ref = 'kluent-android-version' }
+app-cash-turbine-turbine = { group = 'app.cash.turbine', name = 'turbine', version.ref = 'app-cash-turbine-turbine' }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
