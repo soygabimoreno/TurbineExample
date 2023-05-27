@@ -28,7 +28,7 @@ class MainViewModelTest {
     }
 
     @Test
-    fun `WHEN init THEN state should be Idle`() = runTest(dispatcher) {
+    fun `WHEN init THEN uiState should be Idle`() = runTest(dispatcher) {
         viewModel.uiState.value shouldBeInstanceOf MainViewModel.UiState.Idle::class
     }
 
@@ -41,7 +41,7 @@ class MainViewModelTest {
     }
 
     @Test
-    fun `GIVEN success state WHEN changeUiState THEN state should be Success`() =
+    fun `GIVEN success WHEN changeUiState THEN uiState should be Success`() =
         runTest(dispatcher) {
             every { getRandomBooleanUseCase() } returns true
 
@@ -51,7 +51,7 @@ class MainViewModelTest {
         }
 
     @Test
-    fun `GIVEN success state WHEN changeUiState THEN state should be Success using Turbine`() =
+    fun `GIVEN success WHEN changeUiState THEN uiState should be Success using Turbine`() =
         runTest(dispatcher) {
             every { getRandomBooleanUseCase() } returns true
 
@@ -64,7 +64,7 @@ class MainViewModelTest {
         }
 
     @Test
-    fun `GIVEN error state WHEN changeUiState THEN state should be Error`() = runTest(dispatcher) {
+    fun `GIVEN error WHEN changeUiState THEN uiState should be Error`() = runTest(dispatcher) {
         every { getRandomBooleanUseCase() } returns false
 
         viewModel.changeUiState()
@@ -73,7 +73,7 @@ class MainViewModelTest {
     }
 
     @Test
-    fun `GIVEN error state WHEN changeUiState THEN state should be Error using Turbine`() =
+    fun `GIVEN error WHEN changeUiState THEN uiState should be Error using Turbine`() =
         runTest(dispatcher) {
             every { getRandomBooleanUseCase() } returns false
 
